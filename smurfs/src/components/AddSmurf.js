@@ -11,9 +11,7 @@ export class AddSmurf extends Component {
         };
 
       }
-
-
-      handleChange = event => {
+     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
       };
     
@@ -61,6 +59,7 @@ export class AddSmurf extends Component {
             />
     
             <button>ADD NEW Smurf!!!!</button>
+            
           </form>
         );
       }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {connect} from 'react-redux';
-import {getSmurfs} from '../actions'
+import {getSmurfs,deleteSmurf} from '../actions'
 
 import  AddSmurf  from './AddSmurf';
 /*
@@ -25,7 +25,9 @@ class App extends Component {
           <AddSmurf />
      
           {this.props.smurfs.map(smurf=>(
+           
             <div className="smurf-card">
+            <button type="button" onClick={(e)=>this.props.deleteSmurf(smurf.id)}>X</button>
             <h1> name: {smurf.name}</h1>
             <h3>
               age: {smurf.age}
@@ -49,4 +51,4 @@ const mapStateToProps = state => {
     smurfs: state.smurfs
   }
 }
-export default connect(mapStateToProps,{getSmurfs})(App);
+export default connect(mapStateToProps,{getSmurfs, deleteSmurf})(App);
