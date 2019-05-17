@@ -18,6 +18,12 @@ export class AddSmurf extends Component {
     e.preventDefault();
     const obj = { ...this.state };
     this.props.addSmurf(obj);
+    console.log(e.target.target)
+    this.setState({
+      name: '',
+      age: '',
+      height: '',
+    })
   };
 
   render() {
@@ -29,7 +35,6 @@ export class AddSmurf extends Component {
           value={this.state.name}
           onChange={this.handleChange}
           type="text"
-          placeholder=".."
           name={"name"}
         />
 
@@ -39,17 +44,15 @@ export class AddSmurf extends Component {
           value={this.state.age}
           onChange={this.handleChange}
           type="text"
-          placeholder=".."
           name={"age"}
         />
 
-        <label htmlFor="email">email</label>
+        <label htmlFor="email">height</label>
         <input
           required
-          value={this.state.email}
+          value={this.state.height}
           onChange={this.handleChange}
           type="text"
-          placeholder=".."
           name={"height"}
         />
 
