@@ -9,7 +9,24 @@
   margin: 1em;
 
 }
-.smurf-card{
+form{
   margin: 1em;
 }
+.smurf-container button{
+  margin-right: 90%;
+  background: rgb(187, 71, 71);
+  color: #efefee;
+  padding: 1em 2em;
+}
+.smurf-container button:hover{
+  background: rgb(225, 64, 64);
+}
+
+.smurf-card{
+  margin: 1em;
+  background: #efefef;
+  box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.7);
+  padding: 1em;
+}
+
 
